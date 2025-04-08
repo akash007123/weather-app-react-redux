@@ -72,11 +72,12 @@ const Weather: React.FC = () => {
         {error && <p className="text-center text-red-500 mb-4">{error}</p>}
 
         {data && (
-          <div className="bg-violet-50 p-4 lg:rounded-full md:rounded sm:rounded shadow text-center border border-blue-500">
+          <div className="bg-violet-50 p-4  md:rounded sm:rounded shadow text-center border border-blue-500">
             <h2 className="text-2xl font-semibold text-blue-800 mb-2">
               {data.name}
             </h2>
-            <p className="text-gray-800 text-lg mb-1">
+           <div className="text-justify mt-5">
+           <p className="text-gray-800 text-lg mb-1">
               🌡️ Temperature:{" "}
               <span className="font-medium">{data.main.temp}°C</span>
             </p>
@@ -91,6 +92,7 @@ const Weather: React.FC = () => {
             <p className="text-gray-800 text-lg mb-1">
               ☁️ Clouds: <span className="font-medium">{data.clouds.all}%</span>
             </p>
+           </div>
             
           </div>
         )}
