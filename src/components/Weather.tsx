@@ -36,13 +36,16 @@ const Weather: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-100 to-blue-300 flex items-center justify-center">
       <div className="container mx-auto max-w-md p-6 bg-white shadow-lg rounded-lg">
-        
-      <div className="flex justify-center mb-6">
-      <img src="https://static.vecteezy.com/system/resources/previews/026/571/030/non_2x/weather-icon-with-sun-and-cloud-on-transparent-background-free-png.png" className="w-12" alt="" />
-        <h1 className="text-3xl font-bold text-center text-blue-700 ">
-          Weather App
-        </h1>
-      </div>
+        <div className="flex justify-center mb-6">
+          <img
+            src="https://static.vecteezy.com/system/resources/previews/026/571/030/non_2x/weather-icon-with-sun-and-cloud-on-transparent-background-free-png.png"
+            className="w-12"
+            alt=""
+          />
+          <h1 className="text-3xl font-bold text-center text-blue-700 ">
+            Weather App
+          </h1>
+        </div>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
           <input
@@ -74,9 +77,19 @@ const Weather: React.FC = () => {
               🌡️ Temperature:{" "}
               <span className="font-medium">{data.main.temp}°C</span>
             </p>
+            <p className="text-gray-800 text-lg mb-1">
+              💨 Wind:{" "}
+              <span className="font-medium">{data.wind.speed} m/s</span>
+            </p>
+            <p className="text-gray-800 text-lg mb-1">
+              🌬️ Pressure:{" "}
+              <span className="font-medium">{data.main.pressure} hPa</span>
+            </p>
+            <p className="text-gray-800 text-lg mb-1">
+              ☁️ Clouds: <span className="font-medium">{data.clouds.all}%</span>
+            </p>
             <p className="text-gray-800 text-lg">
-              ☁️ Weather:{" "}
-              <span className="capitalize">{data.weather[0].description}</span>
+              🌡️ AQI: <span className="font-medium">{data.aqi}</span>
             </p>
           </div>
         )}
