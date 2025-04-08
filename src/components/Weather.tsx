@@ -50,11 +50,7 @@ const Weather: React.FC = () => {
             Weather App
           </h1>
 
-          <img
-            src="https://static.vecteezy.com/system/resources/previews/026/571/030/non_2x/weather-icon-with-sun-and-cloud-on-transparent-background-free-png.png"
-            className="w-12"
-            alt=""
-          />
+          
         </div>
 
 
@@ -66,7 +62,7 @@ const Weather: React.FC = () => {
         <p>🌥️</p>
         </div>
         
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-0 mb-6 ">
+        <div className="flex  sm:flex-row items-center justify-center gap-0 mb-6 ">
           <input
             type="text"
             value={city}
