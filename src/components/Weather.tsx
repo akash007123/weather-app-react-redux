@@ -88,9 +88,7 @@ const Weather: React.FC = () => {
             <p className="text-gray-800 text-lg mb-1">
               ☁️ Clouds: <span className="font-medium">{data.clouds.all}%</span>
             </p>
-            <p className="text-gray-800 text-lg">
-              🌡️ AQI: <span className="font-medium">{data.aqi}</span>
-            </p>
+            
           </div>
         )}
       </div>
