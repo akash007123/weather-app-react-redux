@@ -72,7 +72,7 @@ const Weather: React.FC = () => {
         {error && <p className="text-center text-red-500 mb-4">{error}</p>}
 
         {data && (
-          <div className="bg-blue-50 p-4 rounded shadow text-center">
+          <div className="bg-violet-50 p-4 lg:rounded-full md:rounded sm:rounded shadow text-center border border-blue-500">
             <h2 className="text-2xl font-semibold text-blue-800 mb-2">
               {data.name}
             </h2>
