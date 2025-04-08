@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, {  useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
   fetchWeatherStart,
@@ -20,6 +20,7 @@ const Weather: React.FC = () => {
     try {
       const weatherData = await fetchWeather(city);
       dispatch(fetchWeatherSuccess(weatherData));
+      sessionStorage.setItem("weatherData", JSON.stringify(weatherData));
     } catch (err) {
       if (err instanceof Error) {
         dispatch(fetchWeatherFailure(err.message));
@@ -29,9 +30,12 @@ const Weather: React.FC = () => {
     }
   };
 
-  useEffect(() => {
-    handleFetchWeather();
-  }, [city]);
+// For Automatically Fetching 🡇
+
+
+//   useEffect(() => {
+//     handleFetchWeather();
+//   }, [city]);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-100 to-blue-300 flex items-center justify-center">
@@ -57,9 +61,8 @@ const Weather: React.FC = () => {
           />
           <button
             onClick={handleFetchWeather}
-            className="bg-blue-500 text-white px-5 py-2 rounded hover:bg-blue-600 transition duration-200"
-          >
-            Get Weather
+            className=" bg-blue-500 text-white px-5 py-2 rounded hover:bg-blue-600 transition duration-200"
+          >🔍 
           </button>
         </div>
 
