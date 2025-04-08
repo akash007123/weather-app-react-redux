@@ -38,8 +38,8 @@ const Weather: React.FC = () => {
 //   }, [city]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-100 to-blue-300 flex items-center justify-center">
-      <div className="container mx-auto max-w-md p-6 bg-white shadow-lg rounded-lg">
+    <div className="min-h-screen bg-gradient-to-br from-blue-100 to-blue-500 flex items-center justify-center">
+      <div className="container mx-auto max-w-md p-6 bg-white shadow-lg rounded-2xl border-4 border-blue-400">
         <div className="flex justify-center mb-6">
           <img
             src="https://static.vecteezy.com/system/resources/previews/026/571/030/non_2x/weather-icon-with-sun-and-cloud-on-transparent-background-free-png.png"
@@ -51,17 +51,17 @@ const Weather: React.FC = () => {
           </h1>
         </div>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-0 mb-6 ">
           <input
             type="text"
             value={city}
             onChange={(e) => setCity(e.target.value)}
             placeholder="Enter city name"
-            className="flex-1 border border-gray-300 rounded px-4 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-400"
+            className="flex-1 border-4 border-gray-300 rounded px-4 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-400"
           />
           <button
             onClick={handleFetchWeather}
-            className=" bg-blue-500 text-white px-5 py-2 rounded hover:bg-blue-600 transition duration-200"
+            className="border-1 border-gray-300 bg-blue-500 text-white px-5 py-2 rounded hover:bg-blue-600 transition duration-200 text-2xl"
           >🔍 
           </button>
         </div>
