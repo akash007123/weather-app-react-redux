@@ -1,4 +1,4 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 interface WeatherState {
   data: any | null;
@@ -13,7 +13,7 @@ const initialState: WeatherState = {
 };
 
 const weatherSlice = createSlice({
-  name: 'weather',
+  name: "weather",
   initialState,
   reducers: {
     fetchWeatherStart(state) {
@@ -31,5 +31,6 @@ const weatherSlice = createSlice({
   },
 });
 
-export const { fetchWeatherStart, fetchWeatherSuccess, fetchWeatherFailure } = weatherSlice.actions;
+export const { fetchWeatherStart, fetchWeatherSuccess, fetchWeatherFailure } =
+  weatherSlice.actions;
 export default weatherSlice.reducer;
